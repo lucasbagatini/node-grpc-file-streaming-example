@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message Void {}
+
+service VideoService {
+  rpc GetVideoContent (Void) returns (stream Video);
+}
+
+message Video {
+  bytes contentStream = 2;
+}
